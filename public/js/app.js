@@ -1,9 +1,4 @@
 
-
-console.log('client side java script is loaded')
-
-
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
@@ -17,7 +12,7 @@ weatherForm.addEventListener('submit',(e) =>
 
     const location = search.value
 
-    messageOne.textContent = 'Loading'
+    messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
     fetch('http://localhost:3000/weather?address=' + location ).then((response) =>
